@@ -8,7 +8,7 @@ from pokemon.models import Pokemon
 
 def populate():
     pokemons_list = []
-    for i in tqdm(range(10)):
+    for i in tqdm(range(151)):
         response = requests.get(f'https://pokeapi.co/api/v2/pokemon/{ i+1 }')
         response = response.json()
         pokemon_types = [t['type']['name'].title() for t in response['types']]

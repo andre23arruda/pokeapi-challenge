@@ -1,0 +1,70 @@
+@import 'assets/styles/variables';
+@import 'assets/styles/breakpoints';
+
+.App {
+    .bannerContainer {
+        position: fixed;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $header-background;
+        padding: 25px 0;
+
+
+        img {
+            width: 250px;
+        }
+
+        form {
+            input {
+                padding: 5px;
+                max-width: 200px;
+            }
+
+            button {
+                padding: 5px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+
+    .menu, .footerText {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .menu {
+        padding-top: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .nextPage {
+        margin-top: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    footer {
+        margin-top: 50px;
+        background-color: black;
+
+        .footerText {
+            color: white;
+            font-size: 20pt;
+            font-weight: 700;
+            text-align: center;
+            padding: 50px 0;
+        }
+    }
+}

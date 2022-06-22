@@ -25,6 +25,7 @@ qrcode==7.3.1
 requests==2.27.1
 six==1.16.0
 sqlparse==0.2.4
+tqdm==4.64.0
 traitlets==5.1.1
 urllib3==1.26.9
 wcwidth==0.2.5

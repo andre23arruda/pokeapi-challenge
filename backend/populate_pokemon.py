@@ -22,7 +22,7 @@ def populate():
         }
         pokemon = Pokemon(**pokemon_data)
         pokemons_list.append(pokemon)
-    # Pokemon.objects.bulk_create(pokemons_list)
+    Pokemon.objects.bulk_create(pokemons_list)
     print('Pokemons created successfully!')
 
 populate()

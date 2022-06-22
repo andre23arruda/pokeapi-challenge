@@ -9,7 +9,9 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#instalação">Instalação</a>
+  <a href="#instalação">Instalação</a>|&nbsp;&nbsp;&nbsp;
+  <a href="#telas">Telas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#exemplo">Exemplo</a>
 </p>
 
 
@@ -95,9 +97,13 @@ yarn install
 yarn start
 ```
 
-
+## Telas
 <div align="center">
     <img alt="Screen 1" title="Screen 1" src=".github/web_1.png?raw=true" width="400px" />
 </div>
 <p align="center">Screen 1</p>
 <hr>
+
+
+## Exemplo
+<a href="https://andrearruda-pokeapi-challenge.vercel.app/" target="_blank">Visitar</a>

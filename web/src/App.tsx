@@ -3,9 +3,9 @@ import PokemonCard from 'components/PokemonCard'
 import { PokemonProps } from 'types/Pokemon'
 import styles from './App.module.scss'
 
-const API_URL = process.env.REACT_APP_API_URL
 
 export default function App() {
+    const API_URL = process.env.REACT_APP_API_URL
     const [pokemons, setPokemons] = useState<PokemonProps[]>([])
     const [nextPage, setNextPage] = useState('')
     const [search, setSearch] = useState('')

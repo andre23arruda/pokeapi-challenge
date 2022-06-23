@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import PokemonCard from 'components/PokemonCard'
 import { PokemonProps } from 'types/Pokemon'
 import styles from './App.module.scss'
+import Loading from 'components/Loading'
 
 const API_URL = process.env.REACT_APP_API_URL
 
@@ -9,6 +10,7 @@ export default function App() {
     const [pokemons, setPokemons] = useState<PokemonProps[]>([])
     const [nextPage, setNextPage] = useState('')
     const [search, setSearch] = useState('')
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         fetch(`${ API_URL }/api/pokemons/`)
@@ -16,6 +18,7 @@ export default function App() {
         .then(data => {
             setPokemons(data.results)
             setNextPage(data.next)
+            setLoading(false)
         })
     }, [])
 
@@ -26,6 +29,7 @@ export default function App() {
         .then(data => {
             setPokemons(data.results)
             setNextPage(data.next)
+            window.scrollTo({top: 0, behavior: 'smooth'})
         })
     }
 
@@ -33,7 +37,6 @@ export default function App() {
         fetch(nextPage)
         .then(response => response.json())
         .then(data => {
-            // console.log(nextPage, data)
             setPokemons([...pokemons, ...data.results])
             setNextPage(data.next)
         })
@@ -60,6 +63,8 @@ export default function App() {
             </div>
 
             <section className={ styles.menu }>
+                { loading && <Loading /> }
+
                 { pokemons.map(pokemon => (
                     <PokemonCard
                         key={ pokemon.number }

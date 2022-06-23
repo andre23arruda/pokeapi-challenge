@@ -1,6 +1,8 @@
+from django.utils.decorators import method_decorator
+from django.views.decorators.cache import cache_page
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import pagination, filters, viewsets
 from rest_framework.response import Response
-from django_filters.rest_framework import DjangoFilterBackend
 from pokemon.models import Pokemon
 from .serializers import PokemonSerializer
 
@@ -20,9 +22,14 @@ class Pagination20(pagination.PageNumberPagination):
 
 class PokemonViewSet(viewsets.ModelViewSet):
     '''API endpoint that allows Pokemons to be viewed or edited.'''
+    http_method_names = ['get']
     queryset = Pokemon.objects.all()
     serializer_class = PokemonSerializer
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['number']
     search_fields = ['name', 'types']
     pagination_class = Pagination20
+
+    @method_decorator(cache_page(300))
+    def dispatch(self, *args, **kwargs):
+        return super(PokemonViewSet, self).dispatch(*args, **kwargs)

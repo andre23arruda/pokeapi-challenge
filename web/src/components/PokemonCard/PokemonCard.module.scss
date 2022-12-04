@@ -9,6 +9,10 @@
     margin: 10px 0;
     overflow-x: clip;
 
+    box-shadow: 9px 11px 31px -4px rgba(0,0,0,0.24);
+    -webkit-box-shadow: 9px 11px 31px -4px rgba(0,0,0,0.24);
+    -moz-box-shadow: 9px 11px 31px -4px rgba(0,0,0,0.24);
+
     img {
         max-height: 150px;
         margin-top: 15px;

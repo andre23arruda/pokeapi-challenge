@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img alt="Get PokéAPI" src=".github/pokeapi.png" width="150px" />
+    <img alt="Get PokéAPI" src=".github/logo.png" width="150px" />
 </h1>
 
 <h2 align="center">
@@ -26,6 +26,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 **Pequeno projeto para salvar pokémons da PokéAPI e exibí-los em uma página**
+<div align="center">
+    <img alt="Models" title="Models" src=".github/pokemon.png" width="200px" />
+</div>
+<p align="center">Models</p>
+<hr>
 
 ## Instalação
 ### Pré requisitos

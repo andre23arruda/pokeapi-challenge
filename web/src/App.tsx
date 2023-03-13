@@ -46,8 +46,9 @@ export default function App() {
         <div className={ styles.App }>
             <div className={ styles.bannerContainer }>
                 <img className={ styles.banner }
-                    src="/assets/images/banner.png"
+                    src="/assets/images/pokeapi.svg"
                     alt="PokeApi Logo"
+                    width="250"
                 />
 
                 <form onSubmit={ event => handleSearch(event) }>
